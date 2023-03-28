@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reason</fullName>
+    <active>true</active>
+    <errorConditionFormula>NOT(ISNEW()  &amp;&amp;  ISCLONE())  &amp;&amp;  IF( ISPICKVAL( Status , &quot;Unqualified&quot;) ,  ISBLANK( Reason__c ) , false )</errorConditionFormula>
+    <errorDisplayField>Reason__c</errorDisplayField>
+    <errorMessage>Reason can not be empty</errorMessage>
+</ValidationRule>
