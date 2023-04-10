@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Email_Prefix_and_postfix_check</fullName>
+    <active>false</active>
+    <errorConditionFormula>OR(RIGHT( Email , 6) = &apos;.games&apos;,
+ RIGHT( Email , 7) = &apos;.garden&apos;,
+ RIGHT( Email , 6) = &apos;.glass&apos;,
+ RIGHT( Email , 5) = &apos;.free&apos;,
+ RIGHT( Email , 5) = &apos;.talk&apos;,
+ LEFT (Email, 5) = &apos;info@&apos;,
+ LEFT (Email, 7) = &apos;contact@&apos;,
+ LEFT (Email, 5) = &apos;Career@&apos;)</errorConditionFormula>
+    <errorDisplayField>Email</errorDisplayField>
+    <errorMessage>Email should not start with info@, contact@, Career@ and should not end with .games.garden, .glass, .free, .talk</errorMessage>
+</ValidationRule>
