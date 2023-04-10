@@ -44,7 +44,7 @@
         <scale>0</scale>
     </formulas>
     <interviewLabel>Update_z {!$Flow.CurrentDateTime}</interviewLabel>
-    <label>Update_z</label>
+    <label>Email_Length_Check</label>
     <processMetadataValues>
         <name>BuilderType</name>
         <value>
@@ -71,7 +71,7 @@
             <targetReference>Email_length_Check</targetReference>
         </connector>
         <object>Lead</object>
-        <recordTriggerType>Create</recordTriggerType>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
         <triggerType>RecordAfterSave</triggerType>
     </start>
     <status>Active</status>
